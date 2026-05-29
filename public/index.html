@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face App — Log in</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <section id="auth-screen" class="screen">
+    <div class="auth-card">
+      <img src="./img/cpc.png" alt="logo" class="logocpc">
+      <h1 class="logo">CPC - <span>Connect</span></h1>
+      <p class="tagline">Share moments with students in campus!</p>
+      <form id="login-form" class="auth-form">
+        <h2>Log in</h2>
+        <input type="text" name="username" placeholder="Username" required autocomplete="username">
+        <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </form>
+      <hr>
+      <form id="register-form" class="auth-form">
+        <h2>Create account</h2>
+        <input type="text" name="name" placeholder="Full name" required>
+        <input type="text" name="username" placeholder="Username" required autocomplete="username">
+        <input type="password" name="password" placeholder="Password" required autocomplete="new-password">
+        <button type="submit" class="btn btn-secondary">Sign up</button>
+      </form>
+      <p id="auth-error" class="error" hidden></p>
+
+    
+
+    </div>
+  </section>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

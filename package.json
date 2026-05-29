@@ -1,0 +1,23 @@
+{
+  "name": "face-app",
+  "version": "1.0.0",
+  "description": "Simple social feed (Facebook/Instagram style)",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "users": "node scripts/list-users.js",
+    "posts": "node scripts/list-posts.js",
+    "db:check": "node scripts/db-check.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.1"
+  }
+}

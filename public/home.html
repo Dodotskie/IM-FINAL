@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face App — Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <h1 class="logo-sm">CPC - <span>Connect</span></h1>
+    <div class="top-actions">
+      <span id="user-greeting"></span>
+      <button type="button" id="logout-btn" class="btn btn-ghost">Log out</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="side-nav">
+        <a href="#" class="nav-item active" data-view="feed">Home</a>
+        <a href="#" class="nav-item" data-view="create">Create post</a>
+      </nav>
+      <div class="profile-card">
+        <div class="avatar" id="sidebar-avatar">?</div>
+        <p id="sidebar-name">Guest</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div id="view-feed" class="view">
+        <div id="feed" class="feed"></div>
+        <p id="feed-empty" class="empty" hidden>No posts yet. Be the first to share!</p>
+      </div>
+
+      <div id="view-create" class="view" hidden>
+        <div class="create-card">
+          <h2 id="post-form-title">New post</h2>
+          <form id="post-form">
+            <textarea name="text" rows="4" placeholder="What's on your mind?"></textarea>
+            <input type="file" name="imageFile" accept="image/*">
+            <input type="hidden" name="imageUrl" value="">
+            <div class="create-actions">
+              <button type="submit" class="btn btn-primary">Post</button>
+              <button type="button" id="cancel-edit" class="btn btn-ghost" hidden>Cancel</button>
+            </div>
+          </form>
+          <p id="post-error" class="error" hidden></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <button type="button" class="mobile-nav-btn active" data-view="feed">Home</button>
+    <button type="button" class="mobile-nav-btn" data-view="create">Post</button>
+    <button type="button" id="mobile-logout" class="mobile-nav-btn">Exit</button>
+  </nav>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>
