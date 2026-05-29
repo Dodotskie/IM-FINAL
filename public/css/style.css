@@ -45,7 +45,7 @@ body {
   background: var(--card);
   border-radius: var(--radius);
   padding: 2rem;
-  width: 100%;
+  width: min(100%, 380px);
   max-width: 380px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
@@ -85,8 +85,8 @@ body {
 
 .auth-form input {
   width: 100%;
-  padding: 0.65rem 0.75rem;
-  margin-bottom: 0.5rem;
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 0.65rem;
   border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 0.95rem;
@@ -95,6 +95,12 @@ body {
 .auth-form .btn {
   width: 100%;
   margin-top: 0.25rem;
+  min-height: 44px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 hr {
@@ -378,6 +384,21 @@ hr {
 
   .layout {
     padding: 1rem 0.75rem 5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .feed,
+  .create-card {
+    max-width: 100%;
+  }
+
+  .top-bar {
+    padding: 0.75rem 0.85rem;
   }
 
   .mobile-nav {
@@ -417,6 +438,18 @@ hr {
 @media (max-width: 480px) {
   .auth-card {
     padding: 1.5rem;
+  }
+
+  .auth-form input {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
   }
 
   .top-bar {
